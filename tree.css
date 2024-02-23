@@ -1,0 +1,278 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Global styles */
+body,html{
+  font-size:15px;
+}
+
+h3 {
+  min-width: 100%;
+}
+
+ul li::before{
+content:none;
+ margin-top: 0;
+margin-left: 0;
+}
+
+:focus {
+  outline: 2px solid #ff0;
+}
+
+/* Style for the tree container */
+.tree {
+  color: black;
+  display: flex;
+  /* Establish a flex container */
+  justify-content: center;
+  /* Center the content horizontally */
+  align-items: flex-start;
+  /* Center the content vertically */
+  /* min-height: 100vh; */
+  /* Full height of the viewport */
+  padding: 20px;
+  transform-origin: top;
+  transition: all 0.3s ease-in-out;
+}
+
+.tree span {
+  display: block;
+  min-width: 100%;
+}
+
+/* Align the children in columns */
+.tree>ul {
+  display: flex;
+  margin-left: .5em;
+    /* Use flex layout for children */
+}
+
+/* Style for each node of the tree */
+.tree li {
+  position: relative;
+  list-style: none;
+  border: none;
+  border-radius: 15px;
+  padding: 0.25em;
+  margin: 5px;
+  /* Adjusted to only have vertical margin */
+  background-color: #8058b166;
+  display: flex;
+  /* Vertically center the text */
+  justify-content: space-between;
+  border-top: 1px solid #fff;
+}
+
+.tree li.expandable{
+  padding-left:1.5em;
+}
+
+.tree>ul>li {
+  gap: 2em;
+  display: block;
+}
+.tree>ul>li>h2{
+  float:left;
+}
+.tree>ul>li>h2+div{
+  float:right;
+ 
+}
+.tree>ul>li>h2+div>button{
+ border-radius: 15px;
+  padding: 0.25em;}
+/* Style for the first level of nodes to appear in the first column */
+.level0>div>ul>li {
+
+  display: flex;
+  border:2px solid currentColor;
+  /* Establish a flex container for each root-level li */
+
+  /* Stack the children vertically */
+  justify-content: center;
+  /* Center the children vertically */
+
+  /* Align the children to the start (left side) */
+}
+
+.level0{
+  clear: both;
+}
+/* Style for the second level of nodes to appear in the second column */
+.level1 {
+  display: flex;
+  /* Use flex layout for second-level ul */
+  flex-direction: column;
+  /* Stack the children vertically */
+  padding-left: 20px;
+  /* Provide some space from the parent node */
+}
+
+.tree .level1,
+.tree .level2{
+  flex-grow:1;
+}
+.tree .level2 > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  color:white;
+  /* Use flex layout for fourth-level ul */
+  flex-direction: row;
+  /* Stack the children vertically */
+  /* Provide some space from the parent node */
+}
+
+.tree .level2>ul>li {
+  /* Use flex layout for fifth-level ul */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: baseline;
+  /* Stack the children vertically */
+  padding-left: 20px;
+  color: black;
+  background-color: white;
+  /* Provide some space from the parent node */
+}
+
+
+.tree .level3>ul>li {
+  display: list-item;
+  /* Use flex layout for sixth-level ul */
+  /* Stack the children vertically */
+  /* Provide some space from the parent node */
+}
+
+
+
+
+
+.tree li.expandable {
+  cursor: pointer;
+}
+
+.tree li.expandable:has(ul):hover {
+  background-color: document;
+}
+
+
+/* Remove flex styles from second and third level Uls to make them stack vertically */
+.level0,
+.level1 {
+  transition: all 0.3s ease-in-out;
+  /* Provide some space from the parent node */
+}
+
+/* Style for nested lists to align with the parent label */
+.tree li>div>ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  /* Hide the nested list initially */
+}
+
+/* Style for the label of each node */
+.tree li>div>ul>li {
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+.tree li>div>ul>li>div>ul> {
+  flex-grow: 1;
+}
+
+/* Adjusted styles for smooth transition */
+.tree li>div>ul {
+  overflow: hidden;
+  /* Ensure overflow content is not visible */
+  transform-origin: top;
+  /* Set the origin of the transformation */
+  transition: all 0.3s ease-in-out;
+  /* Transition for transform and opacity */
+}
+
+.tree .hidden {
+  opacity: 0;
+  transform: scaleY(0);
+  /* Initially collapsed */
+  max-height: 0;
+}
+
+
+
+.expanded {
+  opacity: 1;
+  transform: scaleY(1);
+  /* Expanded state */
+}
+
+/* Style for the arrow icon for all li elements that contain a ul directly */
+.tree li.expandable:has(*+div>ul)::before {
+  content: "\0023f5";
+  color: currentColor;
+  position: absolute;
+  /* Unicode character for a right-pointing triangle */
+  display: inline-block;
+  top:0;
+  left: 5px;
+  transition: transform 0.2s ease;
+  /* Smooth transition for rotation */
+}
+
+/* Style for the arrow icon when the direct child ul of the node is expanded */
+.tree li.expandable:has(>h2+div>ul.expanded)::before
+,
+.tree li.expandable:has(>h3+div>ul.expanded)::before,
+.tree li.expandable:has(>span+div>ul.expanded)::before{
+  content: "\0023f5";
+  transform: rotate(90deg);
+  transform-origin: center;
+  /* Unicode character for a down-pointing triangle */
+}
+
+/* Apply default cursor for li elements without direct child ul */
+.tree li:not(:has(> div > ul)) {
+  cursor: default;
+  background-color: unset;
+  border: none;
+  flex-grow: 1;
+  display: list-item;
+  list-style: initial;
+  padding: 0;
+  margin-left: 20px;
+}
+
+.bottom:not(:empty) {
+  flex-grow: 1;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  color: black;
+  background-color: #ffffff77;
+  cursor: defaul;
+  border-radius: 15px;
+}
+
+.bottom button{
+  padding:.5em;
+  border-radius: 5px;
+  background-color: white;
+  margin: 5px;
+}
+
+#tree .level0 > ul > li:nth-child(2) .level2 > ul{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

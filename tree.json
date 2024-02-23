@@ -1,0 +1,198 @@
+{
+  "name": "Types of prototype testing",
+  "children": [
+    {
+      "name": "Low fidelity",
+      "children": [
+        {
+          "name": "Single or multiple concept testing",
+          "children": [
+            {
+              "name": "Content relevance",
+              "children": [
+                {
+                  "name": "Text clarity"
+                },
+                {
+                  "name": "Readability"
+                },
+                {
+                  "name": "Info accuracy"
+                },
+                {
+                  "name": "Error checking"
+                },
+                {
+                  "name": "Content flow"
+                }
+              ]
+            },
+            {
+              "name": "Visual layout",
+              "children": [
+                {
+                  "name": "Color Schemes"
+                },
+                {
+                  "name": "Font Choices"
+                },
+                {
+                  "name": "Layout Balance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "question": "Is the concept valid?",
+      "answers": [
+        {
+          "name": "Yes",
+          "feedback": "Yes. Proceed to functionality  testing"
+        },
+        {
+          "name": "No",
+          "feedback": "No. Iterate based on the feedback and repeat concept testing"
+        }
+      ]
+    },
+    {
+      "name": "Medium fidelity",
+      "children": [
+        {
+          "name": "Functionality testing",
+          "children": [
+            {
+              "name": "Feature functionality",
+              "children": [
+                {
+                  "name": "Requirements check"
+                },
+                {
+                  "name": "Feature integration check"
+                },
+                {
+                  "name": "Feature comparison testing"
+                }
+              ]
+            },
+            {
+              "name": "Task flow testing",
+              "children": [
+                {
+                  "name": "Ease of task completion"
+                },
+                {
+                  "name": "Error in task flows"
+                }
+              ]
+            },
+            {
+              "name": "Navigation testing",
+              "children": [
+                {
+                  "name": "Menu layout"
+                },
+                {
+                  "name": "Feature connection testing"
+                },
+                {
+                  "name": "Page flow"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "question": "Is the concept functionnal?",
+      "answers": [
+        {
+          "name": "Yes",
+          "feedback": "Yes. Proceed to user experience testing"
+        },
+        {
+          "name": "No",
+          "feedback": "No. Iterate based on the feedback and repeat functionality  testing"
+        }
+      ]
+    },
+    {
+      "name": "High fidelity",
+      "children": [
+        {
+          "name": "User experience testing",
+          "children": [
+            {
+              "name": "User satisfaction testing",
+              "children": [
+                {
+                  "name": "Engagement"
+                },
+                {
+                  "name": "Support quality"
+                },
+                {
+                  "name": "In-session behaviour recording"
+                }
+              ]
+            },
+            {
+              "name": "Behaviour tracking",
+              "children": [
+                {
+                  "name": "Scroll patterns"
+                },
+                {
+                  "name": "Threat analysis"
+                },
+                {
+                  "name": "Data privacy check"
+                }
+              ]
+            },
+            {
+              "name": "Security testing",
+              "children": [
+                {
+                  "name": "Compliance audit"
+                },
+                {
+                  "name": "Incident response"
+                },
+                {
+                  "name": "Screen reader test"
+                }
+              ]
+            },
+            {
+              "name": "Accessibility testing",
+              "children": [
+                {
+                  "name": "Colour contrast"
+                },
+                {
+                  "name": "Text size check"
+                },
+                {
+                  "name": "Keyboard navigation test"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      
+      "question": "Are the users satisfied?",
+      "answers": [
+        {
+          "name": "Yes",
+          "feedback": "Yes. Proceed to next increment"
+        },
+        {
+          "name": "No",
+          "feedback": "No. Iterate based on the feedback and repeat user experience testing"
+        }
+      ]
+    }
+  ]
+}
