@@ -1,0 +1,197 @@
+{
+  "name": "Types de tests de prototype",
+  "children": [
+    {
+      "name": "Fidélité basse",
+      "children": [
+        {
+          "name": "Test de concept unique ou multiple",
+          "children": [
+            {
+              "name": "Pertinence du contenu",
+              "children": [
+                {
+                  "name": "Clarté du texte"
+                },
+                {
+                  "name": "Lisibilité"
+                },
+                {
+                  "name": "Exactitude des infos"
+                },
+                {
+                  "name": "Vérification des erreurs"
+                },
+                {
+                  "name": "Flux de contenu"
+                }
+              ]
+            },
+            {
+              "name": "Mise en page visuelle",
+              "children": [
+                {
+                  "name": "Schémas de couleurs"
+                },
+                {
+                  "name": "Choix des polices"
+                },
+                {
+                  "name": "Équilibre de la mise en page"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "question": "Le concept est-il valide ?",
+      "answers": [
+        {
+          "name": "Oui",
+          "feedback": "Oui. Procéder aux tests de fonctionnalité"
+        },
+        {
+          "name": "Non",
+          "feedback": "Non. Itérer en fonction des retours et répéter le test de concept"
+        }
+      ]
+    },
+    {
+      "name": "Fidélité moyenne",
+      "children": [
+        {
+          "name": "Test de fonctionnalité",
+          "children": [
+            {
+              "name": "Fonctionnalité des caractéristiques",
+              "children": [
+                {
+                  "name": "Vérification des exigences"
+                },
+                {
+                  "name": "Vérification de l'intégration des fonctionnalités"
+                },
+                {
+                  "name": "Test de comparaison des fonctionnalités"
+                }
+              ]
+            },
+            {
+              "name": "Test du flux de tâches",
+              "children": [
+                {
+                  "name": "Facilité d'achèvement des tâches"
+                },
+                {
+                  "name": "Erreur dans les flux de tâches"
+                }
+              ]
+            },
+            {
+              "name": "Test de navigation",
+              "children": [
+                {
+                  "name": "Mise en page du menu"
+                },
+                {
+                  "name": "Test de connexion des fonctionnalités"
+                },
+                {
+                  "name": "Flux de pages"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "question": "Le concept est-il fonctionnel ?",
+      "answers": [
+        {
+          "name": "Oui",
+          "feedback": "Oui. Procéder aux tests d'expérience utilisateur"
+        },
+        {
+          "name": "Non",
+          "feedback": "Non. Itérer en fonction des retours et répéter les tests de fonctionnalité"
+        }
+      ]
+    },
+    {
+      "name": "Fidélité élevée",
+      "children": [
+        {
+          "name": "Test d'expérience utilisateur",
+          "children": [
+            {
+              "name": "Test de satisfaction utilisateur",
+              "children": [
+                {
+                  "name": "Engagement"
+                },
+                {
+                  "name": "Qualité du support"
+                },
+                {
+                  "name": "Enregistrement du comportement en session"
+                }
+              ]
+            },
+            {
+              "name": "Suivi du comportement",
+              "children": [
+                {
+                  "name": "Modèles de défilement"
+                },
+                {
+                  "name": "Analyse des menaces"
+                },
+                {
+                  "name": "Vérification de la confidentialité des données"
+                }
+              ]
+            },
+            {
+              "name": "Test de sécurité",
+              "children": [
+                {
+                  "name": "Audit de conformité"
+                },
+                {
+                  "name": "Réponse aux incidents"
+                },
+                {
+                  "name": "Test du lecteur d'écran"
+                }
+              ]
+            },
+            {
+              "name": "Test d'accessibilité",
+              "children": [
+                {
+                  "name": "Contraste des couleurs"
+                },
+                {
+                  "name": "Vérification de la taille du texte"
+                },
+                {
+                  "name": "Test de navigation au clavier"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "question": "Les utilisateurs sont-ils satisfaits ?",
+      "answers": [
+        {
+          "name": "Oui",
+          "feedback": "Oui. Procéder à l'itération suivante"
+        },
+        {
+          "name": "Non",
+          "feedback": "Non. Itérer en fonction des retours et répéter les tests d'expérience utilisateur"
+        }
+      ]
+    }
+  ]
+}
